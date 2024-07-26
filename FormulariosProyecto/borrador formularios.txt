@@ -1,0 +1,266 @@
+<h1>Formulario De Inicio</h1>
+
+        <div>
+            <form action="FormularioInicio" method="">
+                <label for="text">Usuario:</label>
+                <input type="text" name="" id="" maxlength="10" minlength="6" placeholder="Usuario" />
+        </div>
+
+            <div>
+                <label for="">Contraseña</label>
+                <input type="password" name="" id="" maxlength="6" minlength="3" required/>
+            </div>
+
+            <div>
+                <input type="submit" value="Enviar"/>
+            </form>
+            </div>
+
+
+
+<h1>Formulario De Registro Usuario</h1>
+
+        <div>
+            <form action="FormularioRegistroUsuario.html" method="">
+                <label for="text">Nombre:</label>
+                <input type="text" name="" id="" maxlength="20" minlength="3" placeholder="Juan Miguel" />
+        </div>
+
+        <div>
+            <label for="text">Apellido:</label>
+            <input type="text" name="" id="" maxlength="20" minlength="3" placeholder="Gomez Ruiz" />
+        </div>
+
+        <div>
+            <label for="text">No. Cedula:</label>
+            <input type="number" name="" id="" maxlength="1" minlength="7" required/>
+        </div>
+
+        <div>
+            <label for="text">No. Celular:</label>
+            <input type="tel" name="" id="" maxlength="10" minlength="10" required/>
+        </div>
+        
+
+        <div>
+            <label for="text">Correo:</label>
+            <input type="email" name="" id="" maxlength="" minlength="" required/>
+        </div>
+
+        <div>
+            <label for="text">Usuario:</label>
+            <input type="text" name="" id="" maxlength="10" minlength="6" placeholder="Usuario" />
+
+        </div>
+
+            <div>
+                <label for="">Contraseña:</label>
+                <input type="password" name="" id="" maxlength="6" minlength="3" placeholder="" required/>
+            </div>
+
+            <div>
+                <input type="submit" value="Enviar"/>
+                <input type="submit" value="Actualizar"/>
+                <input type="submit" value="Eliminar"/>
+            </form>
+            </div>
+
+
+
+
+<h1>Formulario De Registro Proveedores</h1>
+
+        <div>
+            <form action="FormularioRegistroProveedores.html" method="">
+                <label for="text">NIT Empresa:</label>
+                <input type="number" name="" id="" maxlength="1" minlength="7" required/>    
+        </div>
+
+        <div>
+            <label for="text">Nombre Empresa:</label>
+            <input type="text" name="" id="" maxlength="20" minlength="3" placeholder="Distriubudores zetas" />
+        </div>
+        
+        <div>
+            <label for="text">Nombre Vendedor:</label>
+        <input type="text" name="" id="" maxlength="20" minlength="3" placeholder="Juan Miguel Gomez" />
+        </div>
+
+        <div>
+            <label for="text">No. Celular:</label>
+            <input type="tel" name="" id="" maxlength="10" minlength="10" required/>
+        </div>
+        
+
+        <div>
+            <label for="text">Correo:</label>
+            <input type="email" name="" id="" maxlength="" minlength="" required/>
+        </div>
+
+            <div>
+                <input type="submit" value="Enviar"/>
+                <input type="submit" value="Actualizar"/>
+                <input type="submit" value="Eliminar"/>
+            </form>
+            </div>
+
+
+
+
+<h1>Formulario De Salida Producto</h1>
+
+        <div>
+            <form action="FormularioSalidaProducto.html" method="">
+                <label for="text">Codigo Producto:</label>
+                <input type="number" name="" id="" maxlength="13" minlength="4" placeholder="Codigo de Barras" />
+        </div>
+
+        <div>
+            <label for="text">Fecha Salida Producto:</label>
+            <input type="date" name="" id="" placeholder=""  required/>
+        </div>
+
+        <div>
+            <label for="text">Cantidad Producto:</label>
+            <input type="number" name="" id="" maxlength="1" minlength="4" required/>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar"/>
+            </form>
+        </div>
+
+
+ <h1>Formulario De Entrada Producto</h1>
+
+        <div>
+            <form action="FormularioEntradaProducto.html" method="">
+                <label for="text">Codigo Producto:</label>
+                <input type="number" name="" id="" maxlength="13" minlength="4" placeholder="Codigo de Barras" />
+        </div>
+
+        <div>
+            <label for="text">Fecha Entrada Producto:</label>
+            <input type="date" name="" id="" placeholder=""  required/>
+        </div>
+
+        <div>
+            <label for="text">Cantidad Producto:</label>
+            <input type="number" name="" id="" maxlength="1" minlength="4" required/>
+        </div>
+
+        <div>
+            <label for="text">Fecha de Fabrica:</label>
+            <input type="date" name="" id="" maxlength="" minlength="" required/>
+        </div>
+        
+
+        <div>
+            <label for="text">Fecha de Vencimiento:</label>
+            <input type="date" name="" id="" maxlength="" minlength="" required/>
+        </div>
+
+
+        <div>
+            <input type="submit" value="Enviar"/>
+            </form>
+        </div>
+
+
+
+<h1>Formulario De Registro Cliente</h1>
+
+        <div>
+            <form action="FormularioRegistroCliente.html" method="">
+                <label for="text">Nombre:</label>
+                <input type="text" name="" id="" maxlength="20" minlength="3" placeholder="Juan Miguel" />
+        </div>
+
+        <div>
+            <label for="text">Apellido:</label>
+            <input type="text" name="" id="" maxlength="20" minlength="3" placeholder="Gomez Ruiz" />
+        </div>
+
+        <div>
+            <label for="text">No. Cedula:</label>
+            <input type="number" name="" id="" maxlength="1" minlength="7" required/>
+        </div>
+
+        <div>
+            <label for="text">No. Celular:</label>
+            <input type="tel" name="" id="" maxlength="10" minlength="10" required/>
+        </div>
+        
+
+        <div>
+            <label for="text">Correo:</label>
+            <input type="email" name="" id="" maxlength="" minlength="" required/>
+        </div>
+
+        <div>
+            <label for="text">Puntos:</label>
+            <input type="number" name="" id="" maxlength="1" minlength="5" placeholder="Puntos" />
+
+        </div>
+
+            <div>
+                <input type="submit" value="Enviar"/>
+                <input type="submit" value="Actualizar"/>
+                <input type="submit" value="Eliminar"/>
+            </form>
+            </div>
+
+
+<h1>Formulario De Registro Producto</h1>
+
+        <div>
+            <form action="FormularioRegistroUsuario.html" method="">
+                <label for="text">Codigo Producto:</label>
+                <input type="number" name="" id="" maxlength="13" minlength="4" placeholder="Codigo de Barras" />
+        </div>
+
+        <div>
+            <label for="text">Clase:</label>
+            <input type="text" name="" id="" maxlength="10" minlength="3" placeholder="Clase Producto" />
+        </div>
+
+        <div>
+            <label for="text">Descripcion Producto:</label>
+            <input type="text" name="" id="" maxlength="50" minlength="10" placeholder="Descripcion" required/>
+        </div>
+
+        <div>
+            <label for="text">Presentacion Producto:</label>
+            <input type="text" name="" id="" maxlength="15" minlength="6" placeholder="Presentacion" required/>
+        </div>
+        
+
+        <div>
+            <label for="text">Unidad Base:</label>
+            <input type="text" name="" id="" maxlength="" minlength="" placeholder="Ejm: und o " required/>
+        </div>
+
+        <div>
+            <label for="text">Presentacion:</label>
+            <input type="text" name="" id="" maxlength="10" minlength="6" placeholder="Usuario" />
+
+        </div>
+
+            <div>
+                <label for="">Contenido Neto:</label>
+                <input type="number" name="" id="" maxlength="6" minlength="3" placeholder="" required/>
+            </div>
+
+            <div>
+                <label for="">Precio Unitario Producto:</label>
+                <input type="number" name="" id="" maxlength="7" minlength="3" placeholder="Precio Producto" required/>
+            </div>
+
+            <div>
+                <input type="submit" value="Registrar"/>
+                <input type="submit" value="Actualizar"/>
+                <input type="submit" value="Eliminar"/>
+            </form>
+            </div>
+
+

@@ -1,0 +1,13 @@
+.BarraHor{
+    margin:0;
+    padding:0;
+}
+
+
+li{
+    display:flex;
+    /* float Posicion del listado Lado Derecho*/
+    float:right;
+  /*paddin espacio entre el listado*/  
+    padding:0 10px;
+  }

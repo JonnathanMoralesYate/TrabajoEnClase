@@ -1,0 +1,24 @@
+main{
+    display: grid;
+    grid-template-areas:
+    "head head head"
+    "banner banner banner"
+    "content side side"
+    "foot foot foot";
+    grid-template-rows: auto;
+}
+header {grid-area: head;
+        background-color: aquamarine;
+     }
+banner{grid-area: Banner;
+        background: blue;
+}
+article {grid-area: content;
+          background-color: aqua; 
+        }
+aside {grid-area: side; 
+       background-color: blueviolet;
+    }
+footer {grid-area: foot; 
+        background-color: brown;
+    }

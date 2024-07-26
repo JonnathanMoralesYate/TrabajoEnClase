@@ -1,0 +1,102 @@
+$ git branch
+* main
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (main)
+$ git branch first
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (main)
+$ git branch second
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (main)
+$ git branch third
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (main)
+$ git branch
+  first
+* main
+  second
+  third
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (main)
+$ git switch third
+Switched to branch 'third'
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (third)
+$ git log --oneline
+2e6ac77 (HEAD -> third, origin/third, origin/second, origin/main, origin/first, origin/HEAD, second, main, first) Se agrega el proyecto
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (third)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (main)
+$ git remote -v
+origin  https://github.com/JonnathanMoralesYate/ProyectoVariedadesJyK.git (fetch)
+origin  https://github.com/JonnathanMoralesYate/ProyectoVariedadesJyK.git (push)
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (main)
+$ git switch third
+Switched to branch 'third'
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (third)
+$ git status
+On branch third
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        css/Desingform.css
+        css/DesingformAdmin.css
+        css/DesingformEmplea.css
+        form/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (third)
+$ git add .
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (third)
+$ git status
+On branch third
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   css/Desingform.css
+        new file:   css/DesingformAdmin.css
+        new file:   css/DesingformEmplea.css
+        new file:   form/AccesoAdministrativo.html
+        new file:   form/AccesoEmpleados.html
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (third)
+$ git log --oneline
+2e6ac77 (HEAD -> third, origin/third, origin/second, origin/main, origin/first, origin/HEAD, second, main, first) Se agrega el proyecto
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (third)
+$ git commit -m "Inicio de formularios administrativo y empleados"
+[third 6017a03] Inicio de formularios administrativo y empleados
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 css/Desingform.css
+ create mode 100644 css/DesingformAdmin.css
+ create mode 100644 css/DesingformEmplea.css
+ create mode 100644 form/AccesoAdministrativo.html
+ create mode 100644 form/AccesoEmpleados.html
+
+IBAAPRRTLFSD511+SENA@IBAAPRRTLFSD511 MINGW64 /c/ADSO2024/ProyectoVariedadesJyK (third)
+$ git push origin third       "subir de local a remoto"
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (22/22), 2.81 KiB | 2.81 MiB/s, done.
+Total 22 (delta 14), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (14/14), completed with 4 local objects.
+To https://github.com/JonnathanMoralesYate/ProyectoVariedadesJyK.git
+   10dff65..0d74f97  third -> third
+
+
+
