@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author SENA
- */
+package conexion;
+
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import org.mariadb.jdbc.Connection;
+import org.mariadb.jdbc.Statement;
+
+
 public class formularioRegistro extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form formularioRegistro
@@ -36,7 +39,7 @@ public class formularioRegistro extends javax.swing.JFrame {
         nombreusu = new javax.swing.JTextField();
         apellidousu = new javax.swing.JTextField();
         direcusu = new javax.swing.JTextField();
-        cel = new javax.swing.JTextField();
+        celusu = new javax.swing.JTextField();
         emailusu = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,27 +63,17 @@ public class formularioRegistro extends javax.swing.JFrame {
             }
         });
 
-        idusu.setText("jTextField1");
         idusu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idusuActionPerformed(evt);
             }
         });
 
-        nombreusu.setText("jTextField2");
         nombreusu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreusuActionPerformed(evt);
             }
         });
-
-        apellidousu.setText("jTextField3");
-
-        direcusu.setText("jTextField4");
-
-        cel.setText("jTextField5");
-
-        emailusu.setText("jTextField6");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,7 +91,7 @@ public class formularioRegistro extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(84, 84, 84)
-                                .addComponent(cel, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(celusu, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(49, 49, 49)
@@ -142,7 +135,7 @@ public class formularioRegistro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(cel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(celusu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -156,7 +149,50 @@ public class formularioRegistro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String op =
+        
+        //Metodo que nos permite relacionar base de datos
+        Conexion mysql = new Conexion();
+        
+        String id, nomb, ape, dir, cel, ema="";
+        String sql="";
+        
+        //Captura de datos del formulario y almacena en la variable
+        id = idusu.getText();
+        nomb = nombreusu.getText();
+        ape = apellidousu.getText();
+        dir = direcusu.getText();
+        cel = celusu.getText();
+        ema = emailusu.getText();
+        
+        //Sentencia sql de insercion de datos
+        sql = "INSERT INTO `usuarios`(`id_usu`, `nombre_usu`, `apellido_usu`, `direc_usu`, `cel`, `email_usu`)"+ "VALUES (?, ?, ?, ?, ?, ?)";
+
+try{
+    //Metodo que llama instancia de la base de datos
+    Connection cn = (Connection) mysql.conectar();
+    
+    //preparamos la conectividad a base de datos
+    java.sql.PreparedStatement stm = cn.prepareStatement(sql);
+    
+    stm.setString(1, id);
+    stm.setString(2, nomb);
+    stm.setString(3, ape);
+    stm.setString(4, dir);
+    stm.setString(5, cel);
+    stm.setString(6, ema);
+    stm.executeUpdate();
+    JOptionPane.showMessageDialog(null, "Datos guardados");
+   
+ 
+    
+}catch (SQLException ex){
+    
+            Logger.getLogger(formularioRegistro.class.getName()).log(Level.SEVERE, null, ex);
+                                    
+            }
+    
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void nombreusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreusuActionPerformed
@@ -204,7 +240,7 @@ public class formularioRegistro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidousu;
-    private javax.swing.JTextField cel;
+    private javax.swing.JTextField celusu;
     private javax.swing.JTextField direcusu;
     private javax.swing.JTextField emailusu;
     private javax.swing.JTextField idusu;

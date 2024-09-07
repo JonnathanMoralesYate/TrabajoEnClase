@@ -1,38 +1,33 @@
 package conexion;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 
 public class Conexion {
+    
+    //declarar una conexion
+    Connection conectar=null;
 
-    
-    public static void main(String[] args) {
+    //metodo para conectar
+    public Connection conectar() throws SQLException {
+                
        try {
+           //llamamos el driver de mysql
             Class.forName("org.mariadb.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3307/Prueba?user=root&password=");
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("show databases;");
-            System.out.println("Connected");
-            System.out.println(rs);
-        }catch (ClassNotFoundException | SQLException e){
-            System.out.println(e);
-        }
-    }
-    
-        org.mariadb.jdbc.Connection Conexion() throws ClassNotFoundException, SQLException {
-        Class.forName("org.mariadb.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3307/Prueba?user=root&password=");
-        
-        return (org.mariadb.jdbc.Connection) con;
-    }
-        
-        PreparedStatement preparedStatement(String sql){
-            throw new UnsupportedOperationException("Not supported yet.");
-    }
+            
+            //metodo conectar
+            conectar=DriverManager.getConnection("jdbc:mariadb://localhost:3307/prueba?user=root&password=");
+            JOptionPane.showMessageDialog(null, "Conexion Exitosa", "Conexion", JOptionPane.INFORMATION_MESSAGE);
+            
+        }catch (ClassNotFoundException e){
+            
+            JOptionPane.showMessageDialog(null, "Sin Conexion"+e, "Conexion", JOptionPane.INFORMATION_MESSAGE);
+            
         
     }
+
+        return conectar;
+
+    }
+}
