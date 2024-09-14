@@ -165,7 +165,7 @@ public class formularioRegistro extends javax.swing.JFrame {
         ema = emailusu.getText();
         
         //Sentencia sql de insercion de datos
-        sql = "INSERT INTO `usuarios`(`id_usu`, `nombre_usu`, `apellido_usu`, `direc_usu`, `cel`, `email_usu`)"+ "VALUES (?, ?, ?, ?, ?, ?)";
+        sql = "INSERT INTO `usuarios`(`id_usu`, `nombre_usu`, `apellido_usu`, `direc_usu`, `telefono_usu`, `email_usu`)"+ "VALUES (?, ?, ?, ?, ?, ?)";
 
 try{
     //Metodo que llama instancia de la base de datos
