@@ -40,6 +40,8 @@ public class LoginFrame extends javax.swing.JFrame {
                 String password = new String(passField.getPassword());
                 if (autenticar(username, password)){
                     JOptionPane.showMessageDialog(null,"Inicio de Sesion Exitoso");
+                    new MenuPrincipal().setVisible(true); // Abre el menu Principal
+                    dispose(); // Cierra la ventana de inicio de sesion
 
                 }else{
                     
